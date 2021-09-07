@@ -1,0 +1,224 @@
+/* 전체 설정 초기화 */
+* {
+    margin: 0; padding: 0;
+    font-family: "아임크리수진 OTF";
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+/* 바디 */
+body {
+    width: 720px; margin: 0 auto;
+    background: #E6E6E6;
+}
+
+#page-wrapper {
+    margin: 40px 0; padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+    background: url(./배경.png) no-repeat center center;
+}
+/* 메인 헤더 */
+#main-header {
+    padding: 40px 50px; 
+    background-color: rgba(255, 255, 255, 0.65);
+
+    }
+
+.master-title {
+    font-size: 60px;
+    text-align: center;
+}
+.master-description {
+        font-size: 15px; font-weight: 500;
+        color: #383838;
+        text-align: right;
+}
+/* 메인 네비게이션 */
+#main-navigation {
+    display: block;
+    border-top : 1px solid white;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.outer-menu-item {
+    float: left;
+    position: relative;
+    font-size: 17px;
+}
+.outer-menu-item:hover {
+    background: darkslategrey;
+    color: white;
+}
+
+.menu-title {
+    display: block;
+    height: 30px; line-height: 30px;
+    text-align: center;
+    padding: 5px 40px;
+}
+
+.inner-menu {
+    display: none;
+    position: absolute;
+    top: 40px; left: 0;
+    background: white;
+    box-shadow: 0 1px 2px rgba(5, 5, 5, 0.9);
+    text-align: center;
+}
+
+.inner-menu-item > a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+}
+
+.inner-menu-item > a:hover {
+    background: darkslategrey;
+    color: white;
+}
+
+.inner-menu-item-item,
+.inner-menu-item-item1,
+.inner-menu-item-item2 {
+    display: none;
+    position: absolute;
+    top: 85px; left: 146.36px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(5, 5, 5, 0.9);
+    text-align: center;
+}
+.inner-menu-item-item1 {
+    top: 112px;
+}
+.inner-menu-item-item2 {
+    top: 140px;
+}
+
+.inner-menu-item-item > li > a,
+.inner-menu-item-item1 > li > a,
+.inner-menu-item-item2 > li > a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    width: 136px;
+}
+
+.inner-menu-item-item > li > a:hover,
+.inner-menu-item-item1 > li > a:hover,
+.inner-menu-item-item2 > li > a:hover {
+    background: darkslategrey;
+    color: white;
+}
+/* 컨텐츠 */
+#content {
+    overflow: hidden;
+}
+
+#main-section {
+        float: left;
+        width: 710px;
+}
+#main-aside {
+        float: right;
+        width: 200px;
+        
+}
+
+article {
+    border-bottom: 1px solid #C8C8C8;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+.article-header {
+    padding: 10px 0;
+    margin-bottom: 1px;
+}
+
+.article-title {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+.article-body {
+    font-size: 15px;
+    padding: 20px 0 20px 0;
+
+}
+/* 메뉴 월드컵 */
+.button, .button1 {
+    width: 200px;
+    height: 100px;
+    font-size: 50px;
+}
+.buttonDiv, .GameDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.replay, .replay1 {
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    display: none;
+}
+.result, .result1{
+    font-size: 30px;
+    text-align: center;
+    line-height: 150px;
+    display: none;
+}
+.game, .game1 {
+    display: none;
+}
+.box1 {
+    transition:transform 0.05s linear;
+}
+.box1:hover {
+    transform:scale(1.1); /* default */
+    -webkit-transform:scale(1.1); /*  크롬 */
+}
+
+#World0, #World1, #Esc{
+    display: inline-block;
+}
+/* 메인 푸터 */
+#main-footer > a{
+    color: black;
+}
+
+@media screen and (max-width: 720px) {
+    body {width: auto}
+    #main-header {width: auto; float: none;}
+    .master-title {font-size: 35px;}
+    .master-description {font-size: 8px;}
+    #section {width: auto; float: none;}
+    #page-wrapper {width: auto; float: none;}
+    #main-section {width: auto; float: none;}
+    #main-navigation {width: auto; float: none;}
+    .outer-menu-item {display: inline-flex; float: none; width: 130px; font-size: 12px;}
+    .inner-menu-item-item,
+    .inner-menu-item-item1,
+    .inner-menu-item-item2 {
+        width: 130px;
+        top: 85px; left: -132px;
+    }
+    article {padding: 10px;}
+    .article-title {font-size: 20px;}
+    .article-header > p {font-size: 11px;}
+    .article-body {font-size: 11px; padding: 5px;}
+    .result {font-size: 18px;}
+    .result1 {font-size: 18px;}
+    .button {width: 100px; height: 50px; font-size: 25px;}
+    .button1 {width: 100px; height: 50px; font-size: 25px;}
+    footer {font-size: 12px;}
+}
